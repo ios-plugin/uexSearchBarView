@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */; };
+		6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */; };
+		6EE004C61A6C032300BD3711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE004C51A6C032300BD3711 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6EE004C01A6C032300BD3711 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6EA84EBD1AA058EC008C0905 /* EUExSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUExSearchBarView.h; path = EUExSearchBarView/EUExSearchBarView.h; sourceTree = "<group>"; };
+		6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUExSearchBarView.m; path = EUExSearchBarView/EUExSearchBarView.m; sourceTree = "<group>"; };
+		6EA84EBF1AA058EC008C0905 /* SearchBarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBarTableViewCell.h; path = EUExSearchBarView/SearchBarTableViewCell.h; sourceTree = "<group>"; };
+		6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBarTableViewCell.m; path = EUExSearchBarView/SearchBarTableViewCell.m; sourceTree = "<group>"; };
+		6EE004C21A6C032300BD3711 /* libuexSearchBarView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexSearchBarView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE004C51A6C032300BD3711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6EE004C91A6C032300BD3711 /* EUExSearchBarView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EUExSearchBarView-Prefix.pch"; sourceTree = "<group>"; };
+		6EE004D31A6C032300BD3711 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6EE004D61A6C032300BD3711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6EE004F21A6C037000BD3711 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
+		6EE004F31A6C037000BD3711 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
+		6EE004F41A6C037000BD3711 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
+		6EE004F51A6C037000BD3711 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		6EE004F81A6C037000BD3711 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		6EE004F91A6C037000BD3711 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		6EE004FA1A6C037000BD3711 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		6EE004FB1A6C037000BD3711 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		6EE004FC1A6C037000BD3711 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		6EE004FD1A6C037000BD3711 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		6EE004FE1A6C037000BD3711 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		6EE004FF1A6C037000BD3711 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		6EE005001A6C037000BD3711 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		6EE005011A6C037000BD3711 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		6EE005021A6C037000BD3711 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		6EE005031A6C037000BD3711 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		6EE005041A6C037000BD3711 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		6EE005051A6C037000BD3711 /* WidgetOneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetOneDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6EE004BF1A6C032300BD3711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE004C61A6C032300BD3711 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6EE004B91A6C032300BD3711 = {
+			isa = PBXGroup;
+			children = (
+				6EE004C71A6C032300BD3711 /* EUExSearchBarView */,
+				6EE004C41A6C032300BD3711 /* Frameworks */,
+				6EE004C31A6C032300BD3711 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EE004C31A6C032300BD3711 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EE004C21A6C032300BD3711 /* libuexSearchBarView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EE004C41A6C032300BD3711 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EE004C51A6C032300BD3711 /* Foundation.framework */,
+				6EE004D31A6C032300BD3711 /* XCTest.framework */,
+				6EE004D61A6C032300BD3711 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EE004C71A6C032300BD3711 /* EUExSearchBarView */ = {
+			isa = PBXGroup;
+			children = (
+				6EA84EBD1AA058EC008C0905 /* EUExSearchBarView.h */,
+				6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */,
+				6EA84EBF1AA058EC008C0905 /* SearchBarTableViewCell.h */,
+				6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */,
+				6EE004F11A6C037000BD3711 /* engineHeader */,
+				6EE004C81A6C032300BD3711 /* Supporting Files */,
+			);
+			path = EUExSearchBarView;
+			sourceTree = "<group>";
+		};
+		6EE004C81A6C032300BD3711 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EE004C91A6C032300BD3711 /* EUExSearchBarView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6EE004F11A6C037000BD3711 /* engineHeader */ = {
+			isa = PBXGroup;
+			children = (
+				6EE004F21A6C037000BD3711 /* EUExBase.h */,
+				6EE004F31A6C037000BD3711 /* EUExBaseDefine.h */,
+				6EE004F41A6C037000BD3711 /* EUtility.h */,
+				6EE004F51A6C037000BD3711 /* JSON.h */,
+				6EE004F71A6C037000BD3711 /* SBJson */,
+				6EE005051A6C037000BD3711 /* WidgetOneDelegate.h */,
+			);
+			path = engineHeader;
+			sourceTree = "<group>";
+		};
+		6EE004F71A6C037000BD3711 /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				6EE004F81A6C037000BD3711 /* NSObject+SBJson.h */,
+				6EE004F91A6C037000BD3711 /* SBJson.h */,
+				6EE004FA1A6C037000BD3711 /* SBJsonParser.h */,
+				6EE004FB1A6C037000BD3711 /* SBJsonStreamParser.h */,
+				6EE004FC1A6C037000BD3711 /* SBJsonStreamParserAccumulator.h */,
+				6EE004FD1A6C037000BD3711 /* SBJsonStreamParserAdapter.h */,
+				6EE004FE1A6C037000BD3711 /* SBJsonStreamParserState.h */,
+				6EE004FF1A6C037000BD3711 /* SBJsonStreamWriter.h */,
+				6EE005001A6C037000BD3711 /* SBJsonStreamWriterAccumulator.h */,
+				6EE005011A6C037000BD3711 /* SBJsonStreamWriterState.h */,
+				6EE005021A6C037000BD3711 /* SBJsonTokeniser.h */,
+				6EE005031A6C037000BD3711 /* SBJsonUTF8Stream.h */,
+				6EE005041A6C037000BD3711 /* SBJsonWriter.h */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6EE004C11A6C032300BD3711 /* EUExSearchBarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EE004E51A6C032300BD3711 /* Build configuration list for PBXNativeTarget "EUExSearchBarView" */;
+			buildPhases = (
+				6EE004BE1A6C032300BD3711 /* Sources */,
+				6EE004BF1A6C032300BD3711 /* Frameworks */,
+				6EE004C01A6C032300BD3711 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EUExSearchBarView;
+			productName = EUExSearchBarView;
+			productReference = 6EE004C21A6C032300BD3711 /* libuexSearchBarView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6EE004BA1A6C032300BD3711 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = hongbao.cui;
+			};
+			buildConfigurationList = 6EE004BD1A6C032300BD3711 /* Build configuration list for PBXProject "EUExSearchBarView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6EE004B91A6C032300BD3711;
+			productRefGroup = 6EE004C31A6C032300BD3711 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6EE004C11A6C032300BD3711 /* EUExSearchBarView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6EE004BE1A6C032300BD3711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */,
+				6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6EE004E31A6C032300BD3711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = uexSearchBarView;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6EE004E41A6C032300BD3711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				PRODUCT_NAME = uexSearchBarView;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6EE004E61A6C032300BD3711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
+				DSTROOT = /tmp/EUExSearchBarView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUExSearchBarView/EUExSearchBarView-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexSearchBarView;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6EE004E71A6C032300BD3711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
+				DSTROOT = /tmp/EUExSearchBarView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUExSearchBarView/EUExSearchBarView-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexSearchBarView;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6EE004BD1A6C032300BD3711 /* Build configuration list for PBXProject "EUExSearchBarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE004E31A6C032300BD3711 /* Debug */,
+				6EE004E41A6C032300BD3711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EE004E51A6C032300BD3711 /* Build configuration list for PBXNativeTarget "EUExSearchBarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EE004E61A6C032300BD3711 /* Debug */,
+				6EE004E71A6C032300BD3711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6EE004BA1A6C032300BD3711 /* Project object */;
+}

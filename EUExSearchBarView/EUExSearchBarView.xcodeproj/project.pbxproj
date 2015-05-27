@@ -10,6 +10,7 @@
 		6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */; };
 		6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */; };
 		6EE004C61A6C032300BD3711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE004C51A6C032300BD3711 /* Foundation.framework */; };
+		C656810A1B15B301003AB65E /* ColorConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = C65681091B15B301003AB65E /* ColorConvert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		6EE005031A6C037000BD3711 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
 		6EE005041A6C037000BD3711 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		6EE005051A6C037000BD3711 /* WidgetOneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetOneDelegate.h; sourceTree = "<group>"; };
+		C65681081B15B301003AB65E /* ColorConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConvert.h; sourceTree = "<group>"; };
+		C65681091B15B301003AB65E /* ColorConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConvert.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 		6EE004C71A6C032300BD3711 /* EUExSearchBarView */ = {
 			isa = PBXGroup;
 			children = (
+				C65681081B15B301003AB65E /* ColorConvert.h */,
+				C65681091B15B301003AB65E /* ColorConvert.m */,
 				6EA84EBD1AA058EC008C0905 /* EUExSearchBarView.h */,
 				6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */,
 				6EA84EBF1AA058EC008C0905 /* SearchBarTableViewCell.h */,
@@ -198,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C656810A1B15B301003AB65E /* ColorConvert.m in Sources */,
 				6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */,
 				6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */,
 			);

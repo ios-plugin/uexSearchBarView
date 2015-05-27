@@ -10,6 +10,7 @@
 #import "JSON.h"
 #import "EUtility.h"
 #import "SearchBarTableViewCell.h"
+#import "ColorConvert.h"
 @interface EUExSearchBarView()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>{
     UIButton *cancelBtn;
     UIColor *itemTextColor;
@@ -205,19 +206,19 @@
     NSString *placehoderText = [searchBarDict objectForKey:@"placehoderText"];
     _searchTextField.placeholder = placehoderText;
     NSString *textColorStr = [searchBarDict objectForKey:@"textColor"];
-    _searchTextField.textColor = [EUtility ColorFromString:textColorStr];
+    _searchTextField.textColor = [ColorConvert returnUIColorFromHex:textColorStr];
     NSString *inputBgColorStr = [searchBarDict objectForKey:@"inputBgColor"];
-    _searchTextField.backgroundColor = [EUtility ColorFromString:inputBgColorStr];
+    _searchTextField.backgroundColor = [ColorConvert returnUIColorFromHex:inputBgColorStr];
 
     NSDictionary *listViewDict = [dict objectForKey:@"listView"];
     NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
-    _searchTableView.backgroundColor = [EUtility ColorFromString:bgColorText];
+    _searchTableView.backgroundColor = [ColorConvert returnUIColorFromHex:bgColorText];
     NSString *separatorLineColorText = [listViewDict objectForKey:@"separatorLineColor"];
-    _searchTableView.separatorColor = [EUtility ColorFromString:separatorLineColorText];
+    _searchTableView.separatorColor = [ColorConvert returnUIColorFromHex:separatorLineColorText];
     NSString *itemTextColorText = [listViewDict objectForKey:@"itemTextColor"];
-    self.itemTextColor =[EUtility ColorFromString:itemTextColorText];
+    self.itemTextColor =[ColorConvert returnUIColorFromHex:itemTextColorText];
     NSString *clearHistoryButtonTextColorText = [listViewDict objectForKey:@"clearHistoryButtonTextColor"];
-    self.clearHistoryButtonTextColor =[EUtility ColorFromString:clearHistoryButtonTextColorText];
+    self.clearHistoryButtonTextColor =[ColorConvert returnUIColorFromHex:clearHistoryButtonTextColorText];
     [_searchTableView reloadData];
 }
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
@@ -251,7 +252,7 @@
         }
         _searchTableView.tableFooterView = [self TableFooterView:CGRectMake(0, 0, _searchTableView.frame.size.width, 51.5)];
         [_searchTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-        [_searchTableView setSeparatorColor:[EUtility ColorFromString:@"#666666"]];
+        [_searchTableView setSeparatorColor:[ColorConvert returnUIColorFromHex:@"#666666"]];
     }
     [_searchTableView reloadData];
     return YES;

@@ -77,10 +77,10 @@
 -(UIView *)TableFooterView:(CGRect)rect{
     UIView *footerView = [[[UIView alloc] initWithFrame:rect] autorelease];
     [footerView setBackgroundColor:[UIColor clearColor]];
-//    UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, 0.5)];
-//    [line setBackgroundColor:[UIColor lightGrayColor]];
-//    [footerView addSubview:line];
-//    [line release];
+    //    UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, 0.5)];
+    //    [line setBackgroundColor:[UIColor lightGrayColor]];
+    //    [footerView addSubview:line];
+    //    [line release];
     
     UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [clearBtn setFrame:CGRectMake((rect.size.width-136.0)/2,5, 136.0, 41.5)];
@@ -209,7 +209,7 @@
     _searchTextField.textColor = [ColorConvert returnUIColorFromHex:textColorStr];
     NSString *inputBgColorStr = [searchBarDict objectForKey:@"inputBgColor"];
     _searchTextField.backgroundColor = [ColorConvert returnUIColorFromHex:inputBgColorStr];
-
+    
     NSDictionary *listViewDict = [dict objectForKey:@"listView"];
     NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
     _searchTableView.backgroundColor = [ColorConvert returnUIColorFromHex:bgColorText];
@@ -233,7 +233,7 @@
         return NO;
     }
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-   NSArray *array = (NSArray *)[defaults objectForKey:@"searchBarView_Plugin"];
+    NSArray *array = (NSArray *)[defaults objectForKey:@"searchBarView_Plugin"];
     NSMutableArray *defaultsArray = [NSMutableArray arrayWithArray:array];
     if ([defaultsArray containsObject:textField.text]) {
         [defaultsArray removeObject:textField.text];
@@ -255,6 +255,16 @@
         [_searchTableView setSeparatorColor:[ColorConvert returnUIColorFromHex:@"#666666"]];
     }
     [_searchTableView reloadData];
+    
+    NSMutableDictionary *result=[[NSMutableDictionary alloc]init];
+    [result setObject:[self.dataList firstObject]forKey:@"keyword"];
+    NSError *error=nil;
+    NSData *data=[NSJSONSerialization dataWithJSONObject:result
+                                                 options:NSJSONReadingAllowFragments
+                                                   error:&error];
+    NSString *jsonStr1=[NSString stringWithFormat:@"uexSearchBarView.onSearch('%@')",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]];
+    [EUtility brwView:self.meBrwView evaluateScript:jsonStr1];
+    
     return YES;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

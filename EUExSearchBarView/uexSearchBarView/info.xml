@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexSearchBarView" version="3.0" build="0.0.4">
-        <info>build 0.0.1:搜索框</info>
+        uexName="uexSearchBarView" version="3.0.0" build="0">
+        <info>搜索框</info>
     </plugin>
 </uexplugins>

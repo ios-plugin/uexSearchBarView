@@ -11,6 +11,8 @@
 #import "EUtility.h"
 #import "SearchBarTableViewCell.h"
 #import "ColorConvert.h"
+
+
 @interface EUExSearchBarView()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>{
     UIButton *cancelBtn;
     UIColor *itemTextColor;
@@ -60,7 +62,7 @@
 -(UIView *)iconView{
     UIView *iconView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 137.5, 275.0)] autorelease];
     UIImageView *iconImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10.0, 137.5, 137.5)];
-    [iconImg setImage:[UIImage imageNamed:@"uexSearchBarView/uexSearchBar_plugin_SearchIcon.png"]];
+    [iconImg setImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"uexSearchBar_plugin_SearchIcon.png"]]];
     [iconView addSubview:iconImg];
     
     UILabel *titlelabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 143, 137.5, 45.0)];
@@ -84,7 +86,7 @@
     
     UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [clearBtn setFrame:CGRectMake((rect.size.width-136.0)/2,5, 136.0, 41.5)];
-    [clearBtn setBackgroundImage:[UIImage imageNamed:@"uexSearchBarView/uexSearchBar_plugin_clearhistory.png"] forState:UIControlStateNormal];
+    [clearBtn setBackgroundImage:[UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"uexSearchBar_plugin_clearhistory.png"]] forState:UIControlStateNormal];
     [clearBtn addTarget:self action:@selector(clearHistoryBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [footerView addSubview:clearBtn];
     [footerView setTag:3];
@@ -111,7 +113,7 @@
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, width-50.0, 37)];
         textField.borderStyle = UITextBorderStyleNone;
         textField.delegate = self;
-        UIImage *image = [UIImage imageNamed:@"uexSearchBarView/uexSearchBar_plugin_Searchbg.png"];
+        UIImage *image = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"uexSearchBar_plugin_Searchbg.png"]];
         [textField setBackground:image];
         self.searchTextField = textField;
         [textField setText:@""];

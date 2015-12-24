@@ -7,4 +7,7 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+
+    #import "EUtility.h"
+    #define UEX_BUNDLE [EUtility bundleForPlugin:@"uexSearchBar"]
 #endif

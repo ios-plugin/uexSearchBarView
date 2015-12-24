@@ -7,25 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42A5BEBE1C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB61C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png */; };
+		42A5BEBF1C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB71C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png */; };
+		42A5BEC01C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB81C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png */; };
+		42A5BEC11C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB91C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@3x.png */; };
+		42A5BEC21C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEBA1C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@2x.png */; };
+		42A5BEC31C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEBB1C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@3x.png */; };
+		42A5BEC41C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEBC1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png */; };
+		42A5BEC51C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEBD1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png */; };
 		6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */; };
 		6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */; };
 		6EE004C61A6C032300BD3711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE004C51A6C032300BD3711 /* Foundation.framework */; };
 		C656810A1B15B301003AB65E /* ColorConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = C65681091B15B301003AB65E /* ColorConvert.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		6EE004C01A6C032300BD3711 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		42A5BEB01C2BD108000D8B4E /* uexSearchBarView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uexSearchBarView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A5BEB61C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_clearhistory@2x.png"; sourceTree = "<group>"; };
+		42A5BEB71C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_clearhistory@3x.png"; sourceTree = "<group>"; };
+		42A5BEB81C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_SearchBar_First@2x.png"; sourceTree = "<group>"; };
+		42A5BEB91C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_SearchBar_First@3x.png"; sourceTree = "<group>"; };
+		42A5BEBA1C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_Searchbg@2x.png"; sourceTree = "<group>"; };
+		42A5BEBB1C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_Searchbg@3x.png"; sourceTree = "<group>"; };
+		42A5BEBC1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_SearchIcon@2x.png"; sourceTree = "<group>"; };
+		42A5BEBD1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_SearchIcon@3x.png"; sourceTree = "<group>"; };
 		6EA84EBD1AA058EC008C0905 /* EUExSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUExSearchBarView.h; path = EUExSearchBarView/EUExSearchBarView.h; sourceTree = "<group>"; };
 		6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUExSearchBarView.m; path = EUExSearchBarView/EUExSearchBarView.m; sourceTree = "<group>"; };
 		6EA84EBF1AA058EC008C0905 /* SearchBarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBarTableViewCell.h; path = EUExSearchBarView/SearchBarTableViewCell.h; sourceTree = "<group>"; };
@@ -58,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42A5BEAD1C2BD108000D8B4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EE004BF1A6C032300BD3711 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,10 +81,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42A5BEB11C2BD108000D8B4E /* uexSearchBarViewBundle */ = {
+			isa = PBXGroup;
+			children = (
+				42A5BEB61C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png */,
+				42A5BEB71C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png */,
+				42A5BEB81C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png */,
+				42A5BEB91C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@3x.png */,
+				42A5BEBA1C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@2x.png */,
+				42A5BEBB1C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@3x.png */,
+				42A5BEBC1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png */,
+				42A5BEBD1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png */,
+			);
+			path = uexSearchBarViewBundle;
+			sourceTree = "<group>";
+		};
 		6EE004B91A6C032300BD3711 = {
 			isa = PBXGroup;
 			children = (
 				6EE004C71A6C032300BD3711 /* EUExSearchBarView */,
+				42A5BEB11C2BD108000D8B4E /* uexSearchBarViewBundle */,
 				6EE004C41A6C032300BD3711 /* Frameworks */,
 				6EE004C31A6C032300BD3711 /* Products */,
 			);
@@ -82,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				6EE004C21A6C032300BD3711 /* libuexSearchBarView.a */,
+				42A5BEB01C2BD108000D8B4E /* uexSearchBarView.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,13 +184,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		42A5BEAF1C2BD108000D8B4E /* uexSearchBarViewBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A5BEB31C2BD108000D8B4E /* Build configuration list for PBXNativeTarget "uexSearchBarViewBundle" */;
+			buildPhases = (
+				42A5BEAC1C2BD108000D8B4E /* Sources */,
+				42A5BEAD1C2BD108000D8B4E /* Frameworks */,
+				42A5BEAE1C2BD108000D8B4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uexSearchBarViewBundle;
+			productName = uexSearchBarViewBundle;
+			productReference = 42A5BEB01C2BD108000D8B4E /* uexSearchBarView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		6EE004C11A6C032300BD3711 /* EUExSearchBarView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EE004E51A6C032300BD3711 /* Build configuration list for PBXNativeTarget "EUExSearchBarView" */;
 			buildPhases = (
 				6EE004BE1A6C032300BD3711 /* Sources */,
 				6EE004BF1A6C032300BD3711 /* Frameworks */,
-				6EE004C01A6C032300BD3711 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -180,6 +225,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hongbao.cui;
+				TargetAttributes = {
+					42A5BEAF1C2BD108000D8B4E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
 			};
 			buildConfigurationList = 6EE004BD1A6C032300BD3711 /* Build configuration list for PBXProject "EUExSearchBarView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -194,11 +244,37 @@
 			projectRoot = "";
 			targets = (
 				6EE004C11A6C032300BD3711 /* EUExSearchBarView */,
+				42A5BEAF1C2BD108000D8B4E /* uexSearchBarViewBundle */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		42A5BEAE1C2BD108000D8B4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42A5BEC11C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@3x.png in Resources */,
+				42A5BEBF1C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png in Resources */,
+				42A5BEC31C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@3x.png in Resources */,
+				42A5BEC41C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png in Resources */,
+				42A5BEC51C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png in Resources */,
+				42A5BEC21C2BD492000D8B4E /* uexSearchBar_plugin_Searchbg@2x.png in Resources */,
+				42A5BEC01C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png in Resources */,
+				42A5BEBE1C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		42A5BEAC1C2BD108000D8B4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EE004BE1A6C032300BD3711 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +288,53 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		42A5BEB41C2BD108000D8B4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zywx.uexSearchBarViewBundle;
+				PRODUCT_NAME = uexSearchBarView;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		42A5BEB51C2BD108000D8B4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zywx.uexSearchBarViewBundle;
+				PRODUCT_NAME = uexSearchBarView;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		6EE004E31A6C032300BD3711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -329,6 +452,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		42A5BEB31C2BD108000D8B4E /* Build configuration list for PBXNativeTarget "uexSearchBarViewBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A5BEB41C2BD108000D8B4E /* Debug */,
+				42A5BEB51C2BD108000D8B4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6EE004BD1A6C032300BD3711 /* Build configuration list for PBXProject "EUExSearchBarView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

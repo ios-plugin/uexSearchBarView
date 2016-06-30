@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexSearchBarView" version="3.0.1" build="1">
-        <info>1:添加IDE支持</info>
+        uexName="uexSearchBarView" version="4.0.0" build="2">
+        <info>2:适配4.0引擎</info>
+        <build>1:添加IDE支持</build>
         <build>0:搜索框</build>
     </plugin>
 </uexplugins>

@@ -415,7 +415,7 @@
 					armv7s,
 					arm64,
 				);
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
 				DSTROOT = /tmp/EUExSearchBarView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -436,7 +436,7 @@
 					armv7s,
 					arm64,
 				);
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
 				DSTROOT = /tmp/EUExSearchBarView.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -459,6 +459,7 @@
 				42A5BEB51C2BD108000D8B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EE004BD1A6C032300BD3711 /* Build configuration list for PBXProject "EUExSearchBarView" */ = {
 			isa = XCConfigurationList;

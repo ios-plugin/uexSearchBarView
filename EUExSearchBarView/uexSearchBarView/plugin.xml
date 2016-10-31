@@ -4,6 +4,6 @@
         <method name="open"></method>
         <method name="close"></method>
         <method name="clearHistory"></method>
-        <method name="setViewStyle"></method>
+        <method name="openWithSuggestion"></method>
     </plugin>
 </uexplugins>

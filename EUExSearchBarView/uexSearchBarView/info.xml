@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <uexplugins>
-    <plugin
-        uexName="uexSearchBarView" version="4.0.0" build="0">
+    <plugin uexName="uexSearchBarView" version="4.0.0" build="0">
         <info>0:uexSearchBarView适配4.0引擎</info>
     </plugin>
 </uexplugins>

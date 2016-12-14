@@ -7,10 +7,9 @@
 //
 
 #import "EUExSearchBarView.h"
-#import "JSON.h"
-#import "EUtility.h"
-#import "SearchBarTableViewCell.h"
-#import "ColorConvert.h"
+
+
+
 
 
 @interface EUExSearchBarView()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>{
@@ -27,27 +26,37 @@
 @property(nonatomic,retain)NSMutableArray *suggestionList;
 @property(nonatomic,retain)UIColor *itemTextColor;
 @property(nonatomic,retain)UIColor *clearHistoryButtonTextColor;
+<<<<<<< HEAD
+=======
+@property(nonatomic,retain)NSArray *sourceList;
+@property(nonatomic,retain)NSMutableArray *suggestionList;
+>>>>>>> origin/4.0-dev
 @property(nonatomic,assign)NSUInteger maxAllowRows;
 @property(nonatomic,assign)BOOL isSuggestion;
 @end;
 @implementation EUExSearchBarView
 @synthesize dataList,itemTextColor,clearHistoryButtonTextColor;
--(id)initWithBrwView:(EBrowserView *)eInBrwView{
-    self = [super initWithBrwView:eInBrwView];
+
+- (instancetype)initWithWebViewEngine:(id<AppCanWebViewEngineObject>)engine{
+    self = [super initWithWebViewEngine:engine];
     if (self) {
         
     }
     return self;
 }
--(void)clean{
+
+
+- (void)clean{
     [self close:nil];
-    [super clean];
 }
--(void)dealloc{
+- (void)dealloc{
     [self close:nil];
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/4.0-dev
 }
--(void)clearHistoryBtnClicked:(id)sender{
+- (void)clearHistoryBtnClicked:(id)sender{
     _searchTextField.text = @"";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:@"searchBarView_Plugin"];
@@ -64,7 +73,11 @@
     _searchTableView.tableFooterView = nil;
 }
 -(UIView *)iconView{
+<<<<<<< HEAD
     UIView *iconView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 137.5, 275.0)] ;
+=======
+    UIView *iconView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 137.5, 275.0)];
+>>>>>>> origin/4.0-dev
     UIImageView *iconImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10.0, 137.5, 137.5)];
     UIImage *image = [self imagesNamedFromCustomBundle:@"uexSearchBar_plugin_SearchIcon"];
     [iconImg setImage:image];
@@ -79,17 +92,16 @@
     [titlelabel setTextAlignment:NSTextAlignmentCenter];
     [titlelabel setBackgroundColor:[UIColor clearColor]];
     [iconView addSubview:titlelabel];
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/4.0-dev
     return iconView;
 }
 -(UIView *)TableFooterView:(CGRect)rect{
     UIView *footerView = [[UIView alloc] initWithFrame:rect];
     [footerView setBackgroundColor:[UIColor clearColor]];
-    //    UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, 0.5)];
-    //    [line setBackgroundColor:[UIColor lightGrayColor]];
-    //    [footerView addSubview:line];
-    //    [line release];
-    
     UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [clearBtn setFrame:CGRectMake((rect.size.width-136.0)/2,5, 136.0, 41.5)];
      UIImage *image = [self imagesNamedFromCustomBundle:@"uexSearchBar_plugin_clearhistory"];
@@ -99,6 +111,7 @@
     [footerView setTag:3];
     return footerView;
 }
+<<<<<<< HEAD
 -(void)open:(NSMutableArray *)array{
     if ([array count] ==0) {
         NSLog(@"paragms is error!!");
@@ -106,18 +119,32 @@
     }
     self.isSuggestion = NO;
     NSDictionary *dict = [[array objectAtIndex:0] JSONValue];
+=======
+- (void)open:(NSMutableArray *)inArguments{
+    self.isSuggestion = NO;
+    ACArgsUnpack(NSDictionary *dict) = inArguments;
+>>>>>>> origin/4.0-dev
     CGFloat x = [[dict objectForKey:@"x"] floatValue];
     CGFloat y = [[dict objectForKey:@"y"] floatValue];
     CGFloat width = [[dict objectForKey:@"w"] floatValue];
     CGFloat height = [[dict objectForKey:@"h"] floatValue];
+<<<<<<< HEAD
     
+=======
+    if (width == 0 || height == 0) {
+        return;
+    }
+>>>>>>> origin/4.0-dev
     
     if (!self.bgImageView) {
         UIImageView *tempbgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
         [tempbgImageView setBackgroundColor:[UIColor whiteColor]];
         [tempbgImageView setUserInteractionEnabled:YES];
         self.bgImageView = tempbgImageView;
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/4.0-dev
     }
     if (!self.searchTextField) {
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, width-50.0, 37)];
@@ -130,7 +157,19 @@
         textField.returnKeyType = UIReturnKeySearch;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.textAlignment = NSTextAlignmentCenter;
+<<<<<<< HEAD
         
+=======
+    }
+    if (dict[@"searchBar"] && self.searchTextField) {
+        NSDictionary *searchBarDict = [dict objectForKey:@"searchBar"];
+        NSString *placehoderText = [searchBarDict objectForKey:@"placehoderText"];
+        _searchTextField.placeholder = placehoderText;
+        NSString *textColorStr = [searchBarDict objectForKey:@"textColor"];
+        _searchTextField.textColor = [UIColor ac_ColorWithHTMLColorString:textColorStr];
+        NSString *inputBgColorStr = [searchBarDict objectForKey:@"inputBgColor"];
+        _searchTextField.backgroundColor = [UIColor ac_ColorWithHTMLColorString:inputBgColorStr];
+>>>>>>> origin/4.0-dev
     }
     if (dict[@"searchBar"]) {
         NSDictionary *searchBarDict = [dict objectForKey:@"searchBar"];
@@ -162,6 +201,7 @@
     
     if (!_searchTableView) {
         _searchTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 37.0, width, height-37) style:UITableViewStylePlain];
+        _searchTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_searchTableView setDelegate:self];
         [_searchTableView setDataSource:self];
         if ([self.dataList count]>0) {
@@ -182,6 +222,7 @@
             [_searchTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         }
     }
+<<<<<<< HEAD
     if (dict[@"listView"]) {
         NSDictionary *listViewDict = [dict objectForKey:@"listView"];
         NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
@@ -192,11 +233,24 @@
         self.itemTextColor =[ColorConvert returnUIColorFromHex:itemTextColorText];
         NSString *clearHistoryButtonTextColorText = [listViewDict objectForKey:@"clearHistoryButtonTextColor"];
         self.clearHistoryButtonTextColor =[ColorConvert returnUIColorFromHex:clearHistoryButtonTextColorText];
+=======
+    if (dict[@"listView"] && self.searchTableView) {
+        NSDictionary *listViewDict = [dict objectForKey:@"listView"];
+        NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
+        _searchTableView.backgroundColor = [UIColor ac_ColorWithHTMLColorString:bgColorText];
+        NSString *separatorLineColorText = [listViewDict objectForKey:@"separatorLineColor"];
+        _searchTableView.separatorColor = [UIColor ac_ColorWithHTMLColorString:separatorLineColorText];
+        NSString *itemTextColorText = [listViewDict objectForKey:@"itemTextColor"];
+        self.itemTextColor =[UIColor ac_ColorWithHTMLColorString:itemTextColorText];
+        NSString *clearHistoryButtonTextColorText = [listViewDict objectForKey:@"clearHistoryButtonTextColor"];
+        self.clearHistoryButtonTextColor =[UIColor ac_ColorWithHTMLColorString:clearHistoryButtonTextColorText];
+>>>>>>> origin/4.0-dev
     }
     [self.bgImageView addSubview:_searchTableView];
     
-    [EUtility brwView:self.meBrwView addSubview:self.bgImageView];
+    [[self.webViewEngine webView] addSubview:self.bgImageView];
 }
+<<<<<<< HEAD
 -(void)openWithSuggestion:(NSMutableArray *)array{
     
     if ([array count] ==0) {
@@ -205,43 +259,74 @@
     }
     self.isSuggestion = YES;
     NSDictionary *dict = [[array objectAtIndex:0] JSONValue];
+=======
+-(void)openWithSuggestion:(NSMutableArray *)inArguments{
+    self.isSuggestion = YES;
+    ACArgsUnpack(NSDictionary *dict) = inArguments;
+>>>>>>> origin/4.0-dev
     CGFloat x = [[dict objectForKey:@"x"] floatValue];
     CGFloat y = [[dict objectForKey:@"y"] floatValue];
     CGFloat width = [[dict objectForKey:@"w"] floatValue];
     CGFloat height = [[dict objectForKey:@"h"] floatValue];
+<<<<<<< HEAD
     
+=======
+    if (width == 0 || height == 0) {
+        return;
+    }
+>>>>>>> origin/4.0-dev
     
     if (!self.bgImageView) {
         UIImageView *tempbgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
         [tempbgImageView setBackgroundColor:[UIColor whiteColor]];
         [tempbgImageView setUserInteractionEnabled:YES];
         self.bgImageView = tempbgImageView;
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/4.0-dev
     }
     if (!self.suggestionTextField) {
         UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, width-50.0, 37)];
         textField.borderStyle = UITextBorderStyleNone;
         textField.delegate = self;
+<<<<<<< HEAD
         UIImage *image = [self imagesNamedFromCustomBundle:@"uexSearchBar_plugin_Searchbg"];
+=======
+        UIImage *image = [UIImage imageWithContentsOfFile:[[UEX_BUNDLE resourcePath] stringByAppendingPathComponent: @"uexSearchBar_plugin_Searchbg.png"]];
+>>>>>>> origin/4.0-dev
         [textField setBackground:image];
         self.suggestionTextField = textField;
         [textField setText:@""];
         textField.returnKeyType = UIReturnKeySearch;
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.textAlignment = NSTextAlignmentCenter;
+<<<<<<< HEAD
         
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChange) name:UITextFieldTextDidChangeNotification object:self.suggestionTextField];
     if (dict[@"searchBar"] &&self.searchTextField) {
+=======
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChange) name:UITextFieldTextDidChangeNotification object:self.suggestionTextField];
+    }
+    if (dict[@"searchBar"] && self.suggestionTextField) {
+>>>>>>> origin/4.0-dev
         NSDictionary *searchBarDict = [dict objectForKey:@"searchBar"];
         NSString *placehoderText = [searchBarDict objectForKey:@"placehoderText"];
         self.suggestionTextField.placeholder = placehoderText;
         NSString *textColorStr = [searchBarDict objectForKey:@"textColor"];
+<<<<<<< HEAD
         self.suggestionTextField.textColor = [ColorConvert returnUIColorFromHex:textColorStr];
         NSString *inputBgColorStr = [searchBarDict objectForKey:@"inputBgColor"];
         self.suggestionTextField.backgroundColor = [ColorConvert returnUIColorFromHex:inputBgColorStr];
     }
     
+=======
+        self.suggestionTextField.textColor = [UIColor ac_ColorWithHTMLColorString:textColorStr];
+        NSString *inputBgColorStr = [searchBarDict objectForKey:@"inputBgColor"];
+        self.suggestionTextField.backgroundColor = [UIColor ac_ColorWithHTMLColorString:inputBgColorStr];
+    }
+>>>>>>> origin/4.0-dev
     [self.bgImageView addSubview:self.suggestionTextField];
     
     cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -252,6 +337,10 @@
     [cancelBtn setFrame:CGRectMake(width-45, 5, 45, 37)];
     [cancelBtn addTarget:self action:@selector(cancelBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.bgImageView addSubview:cancelBtn];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/4.0-dev
     if (!self.suggestionList) {
         self.suggestionList = [NSMutableArray array];
     }
@@ -271,6 +360,7 @@
         }
         
     }
+<<<<<<< HEAD
     
    
     if (!_searchTableView) {
@@ -278,6 +368,18 @@
         [_searchTableView setDelegate:self];
         [_searchTableView setDataSource:self];
         if ([self.suggestionList count]>0) {
+=======
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *defaultsArray = (NSMutableArray *)[defaults objectForKey:@""];
+    [self.dataList addObjectsFromArray:defaultsArray];
+    
+    if (!_searchTableView) {
+        _searchTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 37.0, width, height-37) style:UITableViewStylePlain];
+        _searchTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_searchTableView setDelegate:self];
+        [_searchTableView setDataSource:self];
+        if ([self.dataList count]>0) {
+>>>>>>> origin/4.0-dev
             _searchTableView.tableFooterView = [self TableFooterView:CGRectMake(0, 0, _searchTableView.frame.size.width, 51.5)];
             [_searchTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
             UIView *iconImg = (UIView *)[_searchTableView viewWithTag:100];
@@ -295,6 +397,7 @@
             [_searchTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         }
     }
+<<<<<<< HEAD
     if (dict[@"listView"] &&_searchTableView) {
         NSDictionary *listViewDict = [dict objectForKey:@"listView"];
         NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
@@ -309,6 +412,22 @@
     [self.bgImageView addSubview:_searchTableView];
     
     [EUtility brwView:self.meBrwView addSubview:self.bgImageView];
+=======
+    if (dict[@"listView"] && self.searchTableView) {
+        NSDictionary *listViewDict = [dict objectForKey:@"listView"];
+        NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
+        _searchTableView.backgroundColor = [UIColor ac_ColorWithHTMLColorString:bgColorText];
+        NSString *separatorLineColorText = [listViewDict objectForKey:@"separatorLineColor"];
+        _searchTableView.separatorColor = [UIColor ac_ColorWithHTMLColorString:separatorLineColorText];
+        NSString *itemTextColorText = [listViewDict objectForKey:@"itemTextColor"];
+        self.itemTextColor =[UIColor ac_ColorWithHTMLColorString:itemTextColorText];
+        NSString *clearHistoryButtonTextColorText = [listViewDict objectForKey:@"clearHistoryButtonTextColor"];
+        self.clearHistoryButtonTextColor =[UIColor ac_ColorWithHTMLColorString:clearHistoryButtonTextColorText];
+    }
+    [self.bgImageView addSubview:_searchTableView];
+    
+    [[self.webViewEngine webView] addSubview:self.bgImageView];
+>>>>>>> origin/4.0-dev
 }
 - (void)textFieldTextDidChange{
     [self.suggestionList removeAllObjects];
@@ -327,11 +446,19 @@
         }
         _searchTableView.tableFooterView = [self TableFooterView:CGRectMake(0, 0, _searchTableView.frame.size.width, 51.5)];
         [_searchTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+<<<<<<< HEAD
         [_searchTableView setSeparatorColor:[ColorConvert returnUIColorFromHex:@"#666666"]];
     }
     [_searchTableView reloadData];
 }
 -(void)cancelBtnClicked:(id)sender{
+=======
+        [_searchTableView setSeparatorColor:[UIColor ac_ColorWithHTMLColorString:@"#666666"]];
+    }
+    [_searchTableView reloadData];
+}
+- (void)cancelBtnClicked:(id)sender{
+>>>>>>> origin/4.0-dev
     if (_isSuggestion) {
         [_suggestionTextField resignFirstResponder];
         _suggestionTextField.text = @"";
@@ -339,9 +466,13 @@
         [_searchTextField resignFirstResponder];
         _searchTextField.text = @"";
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/4.0-dev
 }
--(void)close:(NSMutableArray *)array{
+- (void)close:(NSMutableArray *)inArguments{
     if (self.bgImageView) {
         [self.bgImageView removeFromSuperview];
         self.bgImageView = nil;
@@ -372,10 +503,36 @@
         self.clearHistoryButtonTextColor = nil;
     }
 }
--(void)clearHistory:(NSMutableArray *)array{
+- (void)clearHistory:(NSMutableArray *)inArguments{
     [self clearHistoryBtnClicked:nil];
 }
+<<<<<<< HEAD
 
+=======
+//- (void)setViewStyle:(NSMutableArray *)inArguments{
+//    
+//    ACArgsUnpack(NSDictionary *dict) = inArguments;
+//
+//    NSDictionary *searchBarDict = [dict objectForKey:@"searchBar"];
+//    NSString *placehoderText = [searchBarDict objectForKey:@"placehoderText"];
+//    _searchTextField.placeholder = placehoderText;
+//    NSString *textColorStr = [searchBarDict objectForKey:@"textColor"];
+//    _searchTextField.textColor = [UIColor ac_ColorWithHTMLColorString:textColorStr];
+//    NSString *inputBgColorStr = [searchBarDict objectForKey:@"inputBgColor"];
+//    _searchTextField.backgroundColor = [UIColor ac_ColorWithHTMLColorString:inputBgColorStr];
+//    
+//    NSDictionary *listViewDict = [dict objectForKey:@"listView"];
+//    NSString *bgColorText = [listViewDict objectForKey:@"bgColor"];
+//    _searchTableView.backgroundColor = [UIColor ac_ColorWithHTMLColorString:bgColorText];
+//    NSString *separatorLineColorText = [listViewDict objectForKey:@"separatorLineColor"];
+//    _searchTableView.separatorColor = [UIColor ac_ColorWithHTMLColorString:separatorLineColorText];
+//    NSString *itemTextColorText = [listViewDict objectForKey:@"itemTextColor"];
+//    self.itemTextColor =[UIColor ac_ColorWithHTMLColorString:itemTextColorText];
+//    NSString *clearHistoryButtonTextColorText = [listViewDict objectForKey:@"clearHistoryButtonTextColor"];
+//    self.clearHistoryButtonTextColor =[UIColor ac_ColorWithHTMLColorString:clearHistoryButtonTextColorText];
+//    [_searchTableView reloadData];
+//}
+>>>>>>> origin/4.0-dev
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     textField.textAlignment = NSTextAlignmentLeft;
     return YES;
@@ -388,10 +545,16 @@
         return NO;
     }
     if (self.isSuggestion) {
+<<<<<<< HEAD
         NSString *jsonStr1=[NSString stringWithFormat:@"uexSearchBarView.onSearch('%@')",[@{@"keyword":textField.text} JSONRepresentation]];
         [EUtility brwView:self.meBrwView evaluateScript:jsonStr1];
         
     }else{
+=======
+        [self.webViewEngine callbackWithFunctionKeyPath:@"uexSearchBarView.onSearch" arguments:ACArgsPack(@{@"keyword":textField.text}.ac_JSONFragment)];
+        [self.suggestionTextField resignFirstResponder];
+    } else {
+>>>>>>> origin/4.0-dev
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSArray *array = (NSArray *)[defaults objectForKey:@"searchBarView_Plugin"];
         NSMutableArray *defaultsArray = [NSMutableArray arrayWithArray:array];
@@ -412,6 +575,7 @@
             }
             _searchTableView.tableFooterView = [self TableFooterView:CGRectMake(0, 0, _searchTableView.frame.size.width, 51.5)];
             [_searchTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+<<<<<<< HEAD
             [_searchTableView setSeparatorColor:[ColorConvert returnUIColorFromHex:@"#666666"]];
         }
         [_searchTableView reloadData];
@@ -429,16 +593,35 @@
     
     
     return YES;
+=======
+            [_searchTableView setSeparatorColor:[UIColor ac_ColorWithHTMLColorString:@"#666666"]];
+        }
+        [_searchTableView reloadData];
+        
+        NSMutableDictionary *result=[[NSMutableDictionary alloc]init];
+        [result setObject:[self.dataList firstObject] forKey:@"keyword"];
+        [self.webViewEngine callbackWithFunctionKeyPath:@"uexSearchBarView.onSearch" arguments:ACArgsPack(result.ac_JSONFragment)];
+
+    }
+       return YES;
+>>>>>>> origin/4.0-dev
 }
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
+<<<<<<< HEAD
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+=======
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+>>>>>>> origin/4.0-dev
     if (_isSuggestion) {
         if ([self.suggestionList count]>0) {
             return [self.suggestionList count];
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/4.0-dev
     }else{
         if ([self.dataList count]>0) {
             return [self.dataList count];
@@ -447,10 +630,13 @@
     
     return 0;
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *CellIdentifier = @"Cell";
-    SearchBarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *uexSearchBarViewCellIdentifier = @"uexSearchBarViewCell";
+    
+    //SearchBarTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:uexSearchBarViewCellIdentifier];
     if (cell == nil) {
+<<<<<<< HEAD
         cell = [[SearchBarTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]  ;
     }
     if (_isSuggestion) {
@@ -459,17 +645,27 @@
        cell.textLabel.text = [self.dataList objectAtIndex:indexPath.row];
     }
     
+=======
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:uexSearchBarViewCellIdentifier];
+    }
+    if (_isSuggestion) {
+        cell.textLabel.text = [self.suggestionList objectAtIndex:indexPath.row];
+    } else {
+        cell.textLabel.text = [self.dataList objectAtIndex:indexPath.row];
+    }
+>>>>>>> origin/4.0-dev
     if (self.itemTextColor) {
         cell.textLabel.textColor = self.itemTextColor;
     }
     cell.textLabel.textAlignment = NSTextAlignmentLeft;
     return cell;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 41.5;
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+<<<<<<< HEAD
     NSString *jsonStr = nil;
     if (_isSuggestion) {
         self.suggestionTextField.text = [self.suggestionList objectAtIndex:indexPath.row];
@@ -480,12 +676,26 @@
    
     NSString *json = [NSString stringWithFormat:@"uexSearchBarView.onItemClick('%@')",jsonStr];
     [EUtility brwView:self.meBrwView evaluateScript:json];
+=======
+    NSDictionary *dict = nil;
+    if (_isSuggestion) {
+         self.suggestionTextField.text = [self.suggestionList objectAtIndex:indexPath.row];
+        dict = @{@"index":@(indexPath.row),@"keyword":self.suggestionList[indexPath.row]};
+    } else {
+        dict = @{@"index":@(indexPath.row),@"keyword":self.dataList[indexPath.row]};
+    }
+    [self.webViewEngine callbackWithFunctionKeyPath:@"uexSearchBarView.onItemClick" arguments:ACArgsPack(dict.ac_JSONFragment)];
+>>>>>>> origin/4.0-dev
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+<<<<<<< HEAD
     if (self.isSuggestion) {
+=======
+    if (_isSuggestion) {
+>>>>>>> origin/4.0-dev
         [self.suggestionList removeObjectAtIndex:indexPath.row];
         NSArray *array = [NSArray arrayWithObjects:indexPath, nil];
         [tableView deleteRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationBottom];
@@ -516,6 +726,7 @@
         }
     }
     
+<<<<<<< HEAD
 }
 - (UIImage *)imagesNamedFromCustomBundle:(NSString *)imgName
 {
@@ -523,5 +734,7 @@
     NSBundle *bundle = [EUtility bundleForPlugin:@"uexSearchBarView"];
     NSString *img_path = [[bundle resourcePath]stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",imgName]];
     return [UIImage imageWithContentsOfFile:img_path];
+=======
+>>>>>>> origin/4.0-dev
 }
 @end

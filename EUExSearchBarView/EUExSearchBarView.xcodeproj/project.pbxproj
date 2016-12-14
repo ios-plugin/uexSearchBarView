@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42626E541D2260430062DF17 /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42626E531D2260430062DF17 /* AppCanKit.framework */; };
 		42A5BEBE1C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB61C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png */; };
 		42A5BEBF1C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB71C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png */; };
 		42A5BEC01C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEB81C2BD492000D8B4E /* uexSearchBar_plugin_SearchBar_First@2x.png */; };
@@ -16,12 +17,11 @@
 		42A5BEC41C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEBC1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@2x.png */; };
 		42A5BEC51C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A5BEBD1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png */; };
 		6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */; };
-		6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */; };
 		6EE004C61A6C032300BD3711 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE004C51A6C032300BD3711 /* Foundation.framework */; };
-		C656810A1B15B301003AB65E /* ColorConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = C65681091B15B301003AB65E /* ColorConvert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42626E531D2260430062DF17 /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		42A5BEB01C2BD108000D8B4E /* uexSearchBarView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uexSearchBarView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A5BEB61C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_clearhistory@2x.png"; sourceTree = "<group>"; };
 		42A5BEB71C2BD492000D8B4E /* uexSearchBar_plugin_clearhistory@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_clearhistory@3x.png"; sourceTree = "<group>"; };
@@ -33,33 +33,11 @@
 		42A5BEBD1C2BD492000D8B4E /* uexSearchBar_plugin_SearchIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uexSearchBar_plugin_SearchIcon@3x.png"; sourceTree = "<group>"; };
 		6EA84EBD1AA058EC008C0905 /* EUExSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUExSearchBarView.h; path = EUExSearchBarView/EUExSearchBarView.h; sourceTree = "<group>"; };
 		6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUExSearchBarView.m; path = EUExSearchBarView/EUExSearchBarView.m; sourceTree = "<group>"; };
-		6EA84EBF1AA058EC008C0905 /* SearchBarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchBarTableViewCell.h; path = EUExSearchBarView/SearchBarTableViewCell.h; sourceTree = "<group>"; };
-		6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchBarTableViewCell.m; path = EUExSearchBarView/SearchBarTableViewCell.m; sourceTree = "<group>"; };
 		6EE004C21A6C032300BD3711 /* libuexSearchBarView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexSearchBarView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE004C51A6C032300BD3711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6EE004C91A6C032300BD3711 /* EUExSearchBarView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EUExSearchBarView-Prefix.pch"; sourceTree = "<group>"; };
 		6EE004D31A6C032300BD3711 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6EE004D61A6C032300BD3711 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		6EE004F21A6C037000BD3711 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
-		6EE004F31A6C037000BD3711 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
-		6EE004F41A6C037000BD3711 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
-		6EE004F51A6C037000BD3711 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		6EE004F81A6C037000BD3711 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
-		6EE004F91A6C037000BD3711 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
-		6EE004FA1A6C037000BD3711 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
-		6EE004FB1A6C037000BD3711 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
-		6EE004FC1A6C037000BD3711 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
-		6EE004FD1A6C037000BD3711 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
-		6EE004FE1A6C037000BD3711 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
-		6EE004FF1A6C037000BD3711 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
-		6EE005001A6C037000BD3711 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
-		6EE005011A6C037000BD3711 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
-		6EE005021A6C037000BD3711 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
-		6EE005031A6C037000BD3711 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
-		6EE005041A6C037000BD3711 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
-		6EE005051A6C037000BD3711 /* WidgetOneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WidgetOneDelegate.h; sourceTree = "<group>"; };
-		C65681081B15B301003AB65E /* ColorConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConvert.h; sourceTree = "<group>"; };
-		C65681091B15B301003AB65E /* ColorConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorConvert.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42626E541D2260430062DF17 /* AppCanKit.framework in Frameworks */,
 				6EE004C61A6C032300BD3711 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,13 +107,9 @@
 		6EE004C71A6C032300BD3711 /* EUExSearchBarView */ = {
 			isa = PBXGroup;
 			children = (
-				C65681081B15B301003AB65E /* ColorConvert.h */,
-				C65681091B15B301003AB65E /* ColorConvert.m */,
+				42626E531D2260430062DF17 /* AppCanKit.framework */,
 				6EA84EBD1AA058EC008C0905 /* EUExSearchBarView.h */,
 				6EA84EBE1AA058EC008C0905 /* EUExSearchBarView.m */,
-				6EA84EBF1AA058EC008C0905 /* SearchBarTableViewCell.h */,
-				6EA84EC01AA058EC008C0905 /* SearchBarTableViewCell.m */,
-				6EE004F11A6C037000BD3711 /* engineHeader */,
 				6EE004C81A6C032300BD3711 /* Supporting Files */,
 			);
 			path = EUExSearchBarView;
@@ -146,39 +121,6 @@
 				6EE004C91A6C032300BD3711 /* EUExSearchBarView-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6EE004F11A6C037000BD3711 /* engineHeader */ = {
-			isa = PBXGroup;
-			children = (
-				6EE004F21A6C037000BD3711 /* EUExBase.h */,
-				6EE004F31A6C037000BD3711 /* EUExBaseDefine.h */,
-				6EE004F41A6C037000BD3711 /* EUtility.h */,
-				6EE004F51A6C037000BD3711 /* JSON.h */,
-				6EE004F71A6C037000BD3711 /* SBJson */,
-				6EE005051A6C037000BD3711 /* WidgetOneDelegate.h */,
-			);
-			path = engineHeader;
-			sourceTree = "<group>";
-		};
-		6EE004F71A6C037000BD3711 /* SBJson */ = {
-			isa = PBXGroup;
-			children = (
-				6EE004F81A6C037000BD3711 /* NSObject+SBJson.h */,
-				6EE004F91A6C037000BD3711 /* SBJson.h */,
-				6EE004FA1A6C037000BD3711 /* SBJsonParser.h */,
-				6EE004FB1A6C037000BD3711 /* SBJsonStreamParser.h */,
-				6EE004FC1A6C037000BD3711 /* SBJsonStreamParserAccumulator.h */,
-				6EE004FD1A6C037000BD3711 /* SBJsonStreamParserAdapter.h */,
-				6EE004FE1A6C037000BD3711 /* SBJsonStreamParserState.h */,
-				6EE004FF1A6C037000BD3711 /* SBJsonStreamWriter.h */,
-				6EE005001A6C037000BD3711 /* SBJsonStreamWriterAccumulator.h */,
-				6EE005011A6C037000BD3711 /* SBJsonStreamWriterState.h */,
-				6EE005021A6C037000BD3711 /* SBJsonTokeniser.h */,
-				6EE005031A6C037000BD3711 /* SBJsonUTF8Stream.h */,
-				6EE005041A6C037000BD3711 /* SBJsonWriter.h */,
-			);
-			path = SBJson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C656810A1B15B301003AB65E /* ColorConvert.m in Sources */,
-				6EA84EC21AA058EC008C0905 /* SearchBarTableViewCell.m in Sources */,
 				6EA84EC11AA058EC008C0905 /* EUExSearchBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +358,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
 				DSTROOT = /tmp/EUExSearchBarView.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExSearchBarView",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExSearchBarView/EUExSearchBarView-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -439,6 +383,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexSearchBarView";
 				DSTROOT = /tmp/EUExSearchBarView.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExSearchBarView",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExSearchBarView/EUExSearchBarView-Prefix.pch";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

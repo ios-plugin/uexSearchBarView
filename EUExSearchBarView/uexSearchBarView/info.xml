@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <uexplugins>
-  <plugin uexName="uexSearchBarView" version="3.0.3" build="3">
-  	<info>3: 新增openWithSuggestion接口，支持记忆联想功能</info>
-    <build>2: IDE证书更新</build>
-    <build>1: 添加IDE支持</build>
-    <build>0: 搜索框</build>
-  </plugin>
+    <plugin
+        uexName="uexSearchBarView" version="4.0.0" build="0">
+        <info>0:uexSearchBarView适配4.0引擎</info>
+    </plugin>
 </uexplugins>
